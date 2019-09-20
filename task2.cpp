@@ -4,7 +4,6 @@
   В данном случае выбран путь использование класса-интерфейса iLanguage от которого потом 
   наследуются классы, реализующие необходимые нам языки программирования.
 */
-
 #include <iostream>
 
 class iLanguage
@@ -24,18 +23,18 @@ public:
 	
 	virtual std::string generateCode()
 	{
-    std::string ret("return");
+		std::string ret("return");
 		std::cout << "C++ generateCode!" << std::endl;
 
-    return ret;
+		return ret;
 	}
 	
 	virtual std::string someCodeRelatedThing()
 	{
-    std::string ret("return");
+		std::string ret("return");
 		std::cout << "C++ someCodeRelatedThing!" << std::endl;
 
-    return ret;
+		return ret;
 	}
 	
 };
@@ -47,18 +46,18 @@ public:
 	
 	virtual std::string generateCode()
 	{
-    std::string ret("return");
+		std::string ret("return");
 		std::cout << "Java generateCode!" << std::endl;
 
-    return ret;
+		return ret;
 	}
 	
 	virtual std::string someCodeRelatedThing()
 	{
-    std::string ret("return");
+		std::string ret("return");
 		std::cout << "Java someCodeRelatedThing!" << std::endl;
 
-    return ret;
+		return ret;
 	}
 };
 
@@ -78,15 +77,13 @@ public:
 
 int main()
 {
-  CodeGenerator *cg = new CodeGenerator();
+	CodeGenerator *cg = new CodeGenerator();
 
 	iLanguage *cppLang = new Cpp_Lang();
-  cg->doLanguageFeature(cppLang);
+	cg->doLanguageFeature(cppLang);
 	
 	iLanguage *javaLang = new Java_Lang();
-  cg->doLanguageFeature(javaLang);
+	cg->doLanguageFeature(javaLang);
 	
-  // и тд.
-  
 	return 0;
 }
